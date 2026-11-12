@@ -1,0 +1,10 @@
+body {  
+    text-align: center; 
+   display: flex;
+flex-direction: column; 
+background-color: #e8dfcf;
+} 
+h1 { 
+    color: #556B45;
+}
+
