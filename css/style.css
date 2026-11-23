@@ -423,4 +423,22 @@ header, .navbar {
     color: #4b5145;
     max-width: 550px;
     margin: 0 auto;
+} 
+@media (max-width: 768px) {
+
+    .about-order {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #about,
+    #order-form {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 1 auto;
+        margin: 20px 0;
+        box-sizing: border-box;
+    }
+
 }
