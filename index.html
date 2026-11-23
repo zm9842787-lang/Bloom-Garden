@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom & Garden | Luxury Flower Shop</title> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body> 
  <header>
@@ -12,18 +12,18 @@
         <h2 class="logo">Bloom & Garden</h2>
 
         <ul class="nav-links"> 
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Flowers</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#flowers">Flowers</a></li>
             <li><a href="#">Plants</a></li>
             <li><a href="#">Contact</a></li> 
             <li><a href="#">Wedding</a></li>
-        <li><a href="#">Order Now</a></li>
+        <li><a href="#order-form">Order Now</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
     <div class="hero-text">
         <h1>
     Bloom
@@ -31,11 +31,18 @@
     Flowers
 </h1>
         <p>Luxury flowers for every occasion.</p>
-        <button>Explore Now</button>
+        <button onclick="document.getElementById('flowers').scrollIntoView({behavior:'smooth'})">Explore Now</button>
     </div> 
     <img src="images/Romantic Pink and White Flower Bouquet.png" alt="Luxury Flowers" class="hero-image">
-</section> 
-<section class="flowers">
+</section>  
+
+<section class="wedding-section">
+    
+
+    <img src="images/wedding-special.jpq.png" alt="Wedding Flowers and Bridal Car Decoration">
+
+</section>
+<section class="flowers" id="flowers">
     <h2>Our Beautiful Flowers</h2>
     <p>Discover our collection of fresh flowers</p> 
     <div class="flower-grid">
@@ -46,15 +53,143 @@
             <h3>Rose Bouquet</h3>
             <p>Price: 450 NOK</p>
 
-        <a href="#order-form" class="order-button">Order Now</a> 
-
+        <a href="#order-form" class="order-button" data-product="Rose Bouquet">Order Now</a>
+    </div> 
     </div>
+<div class="flower-card">
+    <img src="images/lavender.jpg" alt="Lavender">
+    <div class="flower-info">
+        <h3>Lavender</h3>
+        <p>Price: 199 NOK</p>
+        <a href="#order-form" class="order-button">Order Now</a>
+    </div>
+</div>
 
+<div class="flower-card">
+    <img src="images/monstera.jpg" alt="Monstera Plant">
+    <div class="flower-info">
+        <h3>Monstera Plant</h3>
+        <p>Price: 299 NOK</p>
+        <a href="#order-form" class="order-button">Order Now</a>
+    </div>
+</div>
+
+<div class="flower-card">
+    <img src="images/pink-tulips.jpg" alt="Pink Tulips">
+    <div class="flower-info">
+        <h3>Pink Tulips</h3>
+        <p>Price: 249 NOK</p>
+        <a href="#order-form" class="order-button">Order Now</a>
+    </div>
+</div>
+
+<div class="flower-card">
+    <img src="images/white-lily.jpg" alt="White Lily">
+    <div class="flower-info">
+        <h3>White Lily</h3>
+        <p>Price: 279 NOK</p>
+        <a href="#order-form" class="order-button">Order Now</a>
+    </div>
+</div>
+
+<div class="flower-card">
+    <img src="images/white-orchid.jpg" alt="White Orchid">
+    <div class="flower-info">
+        <h3>White Orchid</h3>
+        <p>Price: 399 NOK</p>
+        <a href="#order-form" class="order-button">Order Now</a>
+    </div>
+</div>
 </div>
 </section> 
+<div class="about-order">
+    <section id="about">
+        <h2>About Bloom & Garden</h2>
+        <p> 
+            Welcome to Bloom & Garden! 
+            We believe flowers bring beauty, 
+            happiness, and love to every moment in life. 
+            Sometimes, a single flower can express feelings that 
+            words cannot and remind someone how special and 
+            valuable they are.We offer fresh flowers and beautiful  
+            arrangements for birthdays, weddings,anniversaries, 
+            and every special moment.
+        </p>  
+
+<div class="contact-info"> 
+    <h3>Contact information</h3> 
+ 
+<p>
+    <strong>Phone:</strong> +47 123 45 678
+    <br>
+    <strong>Email:</strong> info@bloomandgarden.no 
+    <br>
+<strong>Address:</strong> Kristiansund, Norway
+</p> 
+</div>
+    </section> 
+
 <section id="order-form">
     <h2>Place Your Order</h2>
-    <p>Order your favorite flowers</p>
+    <p>Order your favorite flowers</p> 
+    <form id="orderForm">
+
+  <div class="form-grid">
+
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Your name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Your phone number" required>
+    </div>
+<div class="form-group">
+    <label for="address">Delivery Address</label>
+    <input type="text" id="address" placeholder="Your address">
+</div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your email">
+    </div>
+
+    <div class="form-group">
+      <label for="product">Choose Your Flower</label>
+      <select id="product" required>
+        <option value="">Select a product</option> 
+        <option value="Rose Bouquet">Rose Bouquet</option>
+        <option value="White Lily">White Lily</option>
+        <option>Lavender</option>
+        <option>Monstera Plant</option>
+        <option>Pink Tulips</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Delivery Date</label>
+      <input type="date" id="date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" min="1" value="1">
+    </div>
+
+    <div class="form-group full-width">
+      <label for="message">Additional Information</label>
+      <textarea id="message" placeholder="Your message"></textarea>
+    </div>
+
+    <button type="submit" class="order-submit">
+      Place Order
+    </button>
+
+  </div>
+
+</form>
 </section> 
+</div>  
+<script src="js/script.js"></script>
 </body>
 </html>
