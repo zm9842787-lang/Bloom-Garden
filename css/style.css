@@ -425,10 +425,11 @@ header, .navbar {
     margin: 0 auto;
 } 
 @media (max-width: 768px) {
-
     .about-order {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        width: 100%;
         gap: 20px;
     }
 
@@ -436,9 +437,8 @@ header, .navbar {
     #order-form {
         width: 100%;
         max-width: 100%;
-        flex: 0 1 auto;
-        margin: 20px 0;
+        flex: 0 0 auto;
+        margin: 0;
         box-sizing: border-box;
     }
-
 }
