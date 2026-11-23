@@ -1,0 +1,426 @@
+body {  
+    text-align: center; 
+   display: flex;
+flex-direction: column; 
+background-color: #F7F4EA;
+} 
+h1 { 
+    color: #556B45;
+}
+/* Navigation Bar */
+
+header {
+    width: 100%;
+    background-color: #f4f0e8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    color: #526B50;
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+} 
+.hero { 
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 180px;
+} 
+body {
+    background-color: #F4F0E8;
+}
+
+header {
+    background-color: #F4F0E8;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+    .hero-text h1 {
+    font-size: 85px;
+    line-height: 1.05;
+    color: #222;
+    font-family: Georgia, serif;
+}
+
+.hero-text h1 span {
+    display: block;
+    font-size: 35px;
+    font-style: italic;
+    color: #8B967A;
+    margin: 10px 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #556B45;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links li:last-child a {
+    background-color: #556B45;
+    color: #FFFFFF;
+    padding: 12px 22px;
+    border-radius: 30px;
+}
+.hero-text p {
+    font-size: 20px;
+    color: #68745B;
+} 
+ .flower-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+.flower-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-direction: column;
+    background-color: #F4F0E8;
+    padding: 20px;
+} 
+.flower-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+} 
+.flower-card h3,
+.flower-card p,
+.flower-card button {
+    margin: 10px;
+} 
+.flowers {
+    text-align: left;
+}
+
+.flower-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    flex: 1;
+}
+/* ORDER FORM DESIGN */
+
+#order-form { 
+    width: 40%;
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 25px;
+    background-color: #e8eddf;
+    border: 1px solid #8b967a;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+#order-form h2 {
+    text-align: center;
+    color: #40563b;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+#order-form p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+#order-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+#order-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#order-form .form-group label {
+    color: #40563b;
+    font-weight: 600;
+}
+
+#order-form input,
+#order-form select,
+#order-form textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #c9d1c2;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+#order-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+
+#order-form .full-width {
+    grid-column: 1 / -1;
+}
+
+#order-form .order-submit {
+    grid-column: 1 / -1;
+    padding: 15px;
+    background-color: #526b48;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#order-form .order-submit:hover {
+    background-color: #3d5435;
+}
+
+/* MOBILE RESPONSIVE */ 
+
+@media (max-width: 600px) {
+    #order-form {
+        margin: 40px 15px;
+        padding: 22px; 
+        width: calc(100% - 30px);
+max-width: 100%;
+box-sizing: border-box; 
+    }
+
+    .flower-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important; 
+    justify-items: center !important;
+}
+
+.flower-card {
+    min-width: 0;
+    width: 100%; 
+    max-width: 280px !important; 
+    margin: 0 auto !important; 
+    text-align: center !important;
+}
+
+.flower-card img {
+    width: 100%;
+    height: 150px !important;
+    object-fit: cover;
+}
+    #order-form .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #order-form .full-width,
+    #order-form .order-submit {
+        grid-column: 1;
+    }
+} 
+@media (min-width: 601px) and (max-width: 800px) {
+    .navbar {
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+} 
+.order-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3d5435;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}  
+@media (max-width: 600px) {
+
+    .hero {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px !important;
+    }
+
+    .hero-image {
+        width: 100% !important;
+        height: 280px !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+    } 
+
+header, .navbar {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 10px !important;
+}
+
+.nav-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+} 
+.logo,
+.logo img {
+    display: block !important;
+    margin: 0 auto 10px auto !important;
+    max-width: 120px !important;
+}
+
+.hero-image {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 260px !important;
+    object-fit: contain !important;
+    border-radius: 20px !important;
+    margin-top: 15px !important;
+
+} 
+} 
+چه
+/* Wedding Section */
+.wedding-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.wedding-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.wedding-section p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+.wedding-section img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 25px auto;
+}
+
+@media (max-width: 600px) {
+    .wedding-section h2 {
+        font-size: 24px;
+    }
+
+    .wedding-section p {
+        font-size: 15px;
+    }
+
+    .wedding-section img {
+        max-height: 230px;
+    }
+} 
+@media (min-width: 801px) {
+    .flower-card img {
+        width: 80% !important;
+        height: 165px !important;
+        display: block;
+        margin: 0 auto !important;
+    }
+} 
+.about-order {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#about,
+#order-form {
+    flex: 1;
+    min-width: 0;
+} 
+#about {
+    background: #e8eddf;
+    border: 3px solid #8b967a;
+    border-radius: 25px;
+    padding: 10px 20px; 
+    max-width: 450px;
+    box-sizing: border-box; 
+    width: 100%; 
+    flex: 0 1 520px;
+    margin: 100px   auto 0;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+#about h2 {
+    font-size: 34px;
+    color: #40563b;
+    margin-bottom: 25px;
+}
+
+#about p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #4b5145;
+    max-width: 550px;
+    margin: 0 auto;
+}
